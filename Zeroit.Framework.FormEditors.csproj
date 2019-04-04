@@ -1,0 +1,819 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5794EBC4-66D2-4D6F-960E-DD63C3AE3112}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zeroit.Framework.FormEditors</RootNamespace>
+    <AssemblyName>Zeroit.Framework.FormEditors</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\Zeroit.Framework.FormEditors.xml</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Zeroit.Framework.FormEditors.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>ZeroitStrongKeys.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CatColorPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CatColorPicker.designer.cs">
+      <DependentUpon>CatColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DragControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\Brushes\BrushPainter2Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\Brushes\BrushPainter2Dialog.Designer.cs">
+      <DependentUpon>BrushPainter2Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Brushes\BrushPainterDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\Brushes\BrushPainterDialog.Designer.cs">
+      <DependentUpon>BrushPainterDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Brushes\BrushPainter.cs" />
+    <Compile Include="Editors\Brushes\BrushPainter2.cs" />
+    <Compile Include="Editors\Brushes\Painter2Panel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Brushes\Painter2Panel.Designer.cs">
+      <DependentUpon>Painter2Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Brushes\PainterPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Brushes\PainterPanel.Designer.cs">
+      <DependentUpon>PainterPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\ColorGradientEditor\ColorGradientEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\ColorGradientEditor\ColorGradientEditorDialog.Designer.cs">
+      <DependentUpon>ColorGradientEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\ComboColorPicker\ComboColorPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\ComboColorPicker\ComboColorPicker.Designer.cs">
+      <DependentUpon>ComboColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\ComboColorPicker\ComboColorPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\ComboColorPicker\ComboColorPickerDialog.Designer.cs">
+      <DependentUpon>ComboColorPickerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\PenPainter\Line.cs" />
+    <Compile Include="Editors\PenPainter\LinePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\PenPainter\LinePanel.Designer.cs">
+      <DependentUpon>LinePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\PenPainter\PenEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\PenPainter\PenEditorDialog.Designer.cs">
+      <DependentUpon>PenEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Polygon\Polygon.cs" />
+    <Compile Include="Editors\Polygon\PolygonEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\Polygon\PolygonEditorDialog.Designer.cs">
+      <DependentUpon>PolygonEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filler2.cs" />
+    <Compile Include="Filler2EditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filler2EditorDialog.designer.cs">
+      <DependentUpon>Filler2EditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filler.cs" />
+    <Compile Include="Filler2Panel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Filler2Panel.designer.cs">
+      <DependentUpon>Filler2Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FillerEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FillerEditorDialog.designer.cs">
+      <DependentUpon>FillerEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FillerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FillerPanel.Designer.cs">
+      <DependentUpon>FillerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\DaggerObjectAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\ThemeManagers\Design Theme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\ThemeManagers\Hacker Theme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\ThemeManagers\HatchStyleComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\ThemeManagers\J Theme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\ThemeManagers\NYX Theme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\ThemeManagers\OrainsTheme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\ThemeManagers\Spicylips Theme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\ThemeManagers\Themes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\ThemeManagers\Utils.cs" />
+    <Compile Include="HSColor.cs" />
+    <Compile Include="ColorGradientEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorGradientEditor.designer.cs">
+      <DependentUpon>ColorGradientEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorGradientEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorGradientEditorDialog.Designer.cs">
+      <DependentUpon>ColorGradientEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomColorPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomColorPickerDialog.designer.cs">
+      <DependentUpon>CustomColorPickerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Line.cs" />
+    <Compile Include="LinearGradientModeComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LinearGradientPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LinearGradientPanel.Designer.cs">
+      <DependentUpon>LinearGradientPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseColorPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomColorPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomColorPicker.Designer.cs">
+      <DependentUpon>CustomColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashStyleComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HatchStylePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HatchStylePanel.Designer.cs">
+      <DependentUpon>HatchStylePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HatchStyleComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LinearGradientBrush2.cs" />
+    <Compile Include="LineEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LineEditorDialog.Designer.cs">
+      <DependentUpon>LineEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LinePanel.Designer.cs">
+      <DependentUpon>LinePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\HelperControls\ExtendedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\HelperControls\ZeroitLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Amber.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Amber.Designer.cs">
+      <DependentUpon>Amber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Blue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Blue.Designer.cs">
+      <DependentUpon>Blue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\BlueGrey.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\BlueGrey.Designer.cs">
+      <DependentUpon>BlueGrey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Brown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Brown.Designer.cs">
+      <DependentUpon>Brown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Cyan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Cyan.Designer.cs">
+      <DependentUpon>Cyan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Green.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Green.Designer.cs">
+      <DependentUpon>Green.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\GreenLight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\GreenLight.Designer.cs">
+      <DependentUpon>GreenLight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Grey.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Grey.Designer.cs">
+      <DependentUpon>Grey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Indigo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Indigo.Designer.cs">
+      <DependentUpon>Indigo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\LightBlue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\LightBlue.Designer.cs">
+      <DependentUpon>LightBlue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Lime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Lime.Designer.cs">
+      <DependentUpon>Lime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\AmberControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\AmberControl.Designer.cs">
+      <DependentUpon>AmberControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\BlueControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\BlueControl.Designer.cs">
+      <DependentUpon>BlueControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\BlueGrayControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\BlueGrayControl.Designer.cs">
+      <DependentUpon>BlueGrayControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\BrownControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\BrownControl.Designer.cs">
+      <DependentUpon>BrownControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\Amber.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\Blue.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\BlueGrey.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\Brown.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\Cyan.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\DeepOrange.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\Green.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\GreenLight.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\Grey.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\Indigo.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\LightBlue.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\LIme.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\Orange.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\Pink.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\Purple.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\PurpleDeep.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\Red.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\Teal.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\Colors\Yellow.cs" />
+    <Compile Include="MaterialDesign\MaterialDesign\CyanControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\CyanControl.Designer.cs">
+      <DependentUpon>CyanControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\GreenControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\GreenControl.Designer.cs">
+      <DependentUpon>GreenControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\GreenLightControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\GreenLightControl.Designer.cs">
+      <DependentUpon>GreenLightControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\GreyControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\GreyControl.Designer.cs">
+      <DependentUpon>GreyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\IndigoControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\IndigoControl.Designer.cs">
+      <DependentUpon>IndigoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\LightBlueControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\LightBlueControl.Designer.cs">
+      <DependentUpon>LightBlueControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\LimeControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\LimeControl.Designer.cs">
+      <DependentUpon>LimeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\OrangeControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\OrangeControl.Designer.cs">
+      <DependentUpon>OrangeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\OrangeDeepControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\OrangeDeepControl.Designer.cs">
+      <DependentUpon>OrangeDeepControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\PinkControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\PinkControl.Designer.cs">
+      <DependentUpon>PinkControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\PurpleControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\PurpleControl.Designer.cs">
+      <DependentUpon>PurpleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\PurpleDeepControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\PurpleDeepControl.Designer.cs">
+      <DependentUpon>PurpleDeepControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\RedControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\RedControl.Designer.cs">
+      <DependentUpon>RedControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\TealControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\TealControl.Designer.cs">
+      <DependentUpon>TealControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\YellowControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\MaterialDesign\YellowControl.Designer.cs">
+      <DependentUpon>YellowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Orange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Orange.Designer.cs">
+      <DependentUpon>Orange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\OrangeDeep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\OrangeDeep.Designer.cs">
+      <DependentUpon>OrangeDeep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Pink.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Pink.Designer.cs">
+      <DependentUpon>Pink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Purple.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Purple.Designer.cs">
+      <DependentUpon>Purple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\PurpleDeep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\PurpleDeep.Designer.cs">
+      <DependentUpon>PurpleDeep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Red.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Red.Designer.cs">
+      <DependentUpon>Red.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Teal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Teal.Designer.cs">
+      <DependentUpon>Teal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Yellow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaterialDesign\UserControls\Yellow.Designer.cs">
+      <DependentUpon>Yellow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoFlickerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NoFlickerPanel.designer.cs">
+      <DependentUpon>NoFlickerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Polygon.cs" />
+    <Compile Include="PolygonEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PolygonEditorDialog.Designer.cs">
+      <DependentUpon>PolygonEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemColorPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemColorPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemColorPickerDialog.designer.cs">
+      <DependentUpon>SystemColorPickerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <Compile Include="WebColorPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComboColorPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComboColorPicker.Designer.cs">
+      <DependentUpon>ComboColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboColorPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComboColorPickerDialog.Designer.cs">
+      <DependentUpon>ComboColorPickerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebColorPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebColorPickerDialog.designer.cs">
+      <DependentUpon>WebColorPickerDialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseColorPicker.resx">
+      <DependentUpon>BaseColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatColorPicker.resx">
+      <DependentUpon>CatColorPicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorGradientEditor.resx">
+      <DependentUpon>ColorGradientEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Brushes\BrushPainter2Dialog.resx">
+      <DependentUpon>BrushPainter2Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Brushes\BrushPainterDialog.resx">
+      <DependentUpon>BrushPainterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Brushes\Painter2Panel.resx">
+      <DependentUpon>Painter2Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Brushes\PainterPanel.resx">
+      <DependentUpon>PainterPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\ColorGradientEditor\ColorGradientEditorDialog.resx">
+      <DependentUpon>ColorGradientEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\ComboColorPicker\ComboColorPicker.resx">
+      <DependentUpon>ComboColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\ComboColorPicker\ComboColorPickerDialog.resx">
+      <DependentUpon>ComboColorPickerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\PenPainter\LinePanel.resx">
+      <DependentUpon>LinePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\PenPainter\PenEditorDialog.resx">
+      <DependentUpon>PenEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Polygon\PolygonEditorDialog.resx">
+      <DependentUpon>PolygonEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinearGradientPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LinearGradientPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomColorPicker.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HatchStylePanel.resx">
+      <DependentUpon>HatchStylePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\Amber.resx">
+      <DependentUpon>Amber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\Blue.resx">
+      <DependentUpon>Blue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\BlueGrey.resx">
+      <DependentUpon>BlueGrey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\Brown.resx">
+      <DependentUpon>Brown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\Cyan.resx">
+      <DependentUpon>Cyan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\Green.resx">
+      <DependentUpon>Green.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\GreenLight.resx">
+      <DependentUpon>GreenLight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\Grey.resx">
+      <DependentUpon>Grey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\Indigo.resx">
+      <DependentUpon>Indigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\LightBlue.resx">
+      <DependentUpon>LightBlue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\Lime.resx">
+      <DependentUpon>Lime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\AmberControl.resx">
+      <DependentUpon>AmberControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\BlueControl.resx">
+      <DependentUpon>BlueControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\BlueGrayControl.resx">
+      <DependentUpon>BlueGrayControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\BrownControl.resx">
+      <DependentUpon>BrownControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\CyanControl.resx">
+      <DependentUpon>CyanControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\GreenControl.resx">
+      <DependentUpon>GreenControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\GreenLightControl.resx">
+      <DependentUpon>GreenLightControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\GreyControl.resx">
+      <DependentUpon>GreyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\IndigoControl.resx">
+      <DependentUpon>IndigoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\LightBlueControl.resx">
+      <DependentUpon>LightBlueControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\LimeControl.resx">
+      <DependentUpon>LimeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\OrangeControl.resx">
+      <DependentUpon>OrangeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\OrangeDeepControl.resx">
+      <DependentUpon>OrangeDeepControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\PinkControl.resx">
+      <DependentUpon>PinkControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\PurpleControl.resx">
+      <DependentUpon>PurpleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\PurpleDeepControl.resx">
+      <DependentUpon>PurpleDeepControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\RedControl.resx">
+      <DependentUpon>RedControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\TealControl.resx">
+      <DependentUpon>TealControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\MaterialDesign\YellowControl.resx">
+      <DependentUpon>YellowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\Orange.resx">
+      <DependentUpon>Orange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\OrangeDeep.resx">
+      <DependentUpon>OrangeDeep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\Pink.resx">
+      <DependentUpon>Pink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\Purple.resx">
+      <DependentUpon>Purple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\PurpleDeep.resx">
+      <DependentUpon>PurpleDeep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\Red.resx">
+      <DependentUpon>Red.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\Teal.resx">
+      <DependentUpon>Teal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesign\UserControls\Yellow.resx">
+      <DependentUpon>Yellow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoFlickerPanel.resx">
+      <DependentUpon>NoFlickerPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComboColorPicker.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ComboColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComboColorPickerDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ComboColorPickerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColorGradientEditorDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ColorGradientEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomColorPickerDialog.resx">
+      <DependentUpon>CustomColorPickerDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filler2EditorDialog.resx">
+      <DependentUpon>Filler2EditorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filler2Panel.resx">
+      <DependentUpon>Filler2Panel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FillerEditorDialog.resx">
+      <DependentUpon>FillerEditorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FillerPanel.resx">
+      <DependentUpon>FillerPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LineEditorDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LineEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinePanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LinePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PolygonEditorDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PolygonEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemColorPickerDialog.resx">
+      <DependentUpon>SystemColorPickerDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebColorPickerDialog.resx">
+      <DependentUpon>WebColorPickerDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Graphics\Color.bmp" />
+    <Content Include="Graphics\First.bmp" />
+    <Content Include="Graphics\HSL200.png" />
+    <Content Include="Graphics\Last.bmp" />
+    <Content Include="Graphics\Next.bmp" />
+    <Content Include="Graphics\Prev.bmp" />
+    <None Include="Resources\UpRight_small.png" />
+    <None Include="Resources\upRight.png" />
+    <None Include="Resources\UpLeft_small.png" />
+    <None Include="Resources\upLeft.png" />
+    <None Include="Resources\DownRight_small.png" />
+    <None Include="Resources\downRight.png" />
+    <None Include="Resources\DownLeft_small.png" />
+    <None Include="Resources\downLeft.png" />
+    <None Include="Resources\Down.png" />
+    <None Include="Resources\Forward.png" />
+    <None Include="Resources\Double_Right.png" />
+    <None Include="Resources\Double_Left.png" />
+    <None Include="Resources\Back.png" />
+    <None Include="Zeroit.Framework.FormEditors.nuspec" />
+    <None Include="ZeroitStrongKeys.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
