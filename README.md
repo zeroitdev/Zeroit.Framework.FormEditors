@@ -1,6 +1,6 @@
-## **ZEROIT DEV FORM EDITORS**
-
 ![](<https://github.com/zeroitdev/Zeroit.Framework.FormEditors/blob/master/Preview/Preview_1.png>)
+
+## **ZEROIT DEV FORM EDITORS**
 
 This is a library for creating various editor controls for drawing and painting on Windows Forms. I started this project as a way of practicing the C# language. After completing this project and reading through numerous source codes from developers on [codeproject](https://www.codeproject.com/) and [github](https://github.com/), I saw it very useful to help others who intend to learn the language through publishing this project and others.
 
@@ -52,14 +52,3 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-
-
-## SAMPLES
-
-![](<https://github.com/zeroitdev/Zeroit.Framework.FormEditors/blob/master/Preview/Preview_2.png>)
-
-![](<https://github.com/zeroitdev/Zeroit.Framework.FormEditors/blob/master/Preview/Preview_3.png>)
-
-![](<https://github.com/zeroitdev/Zeroit.Framework.FormEditors/blob/master/Preview/Preview_4.png>)
-
-![](<https://github.com/zeroitdev/Zeroit.Framework.FormEditors/blob/master/Preview/Preview_5.png>)
